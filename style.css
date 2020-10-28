@@ -1,0 +1,38 @@
+body {    
+    background-color: lightblue;
+    background-image: url(imagens/02.jpg);
+    background-attachment: fixed;
+    background-size: 100%;
+
+  }
+  
+  h1 {
+    margin-top: 1cm;
+    color: rgb(223, 12, 12);
+    text-align: center;
+    justify-content: center;
+    font-family: 'Trebuchet MS';
+  }
+  
+  p {
+      margin-top: 5cm;
+      margin-right: 100px;
+      
+      color: black;
+      text-align: justify;
+      justify-content: left;
+      font-family: 'Trebuchet MS';
+      Position: left;
+      
+  }
+
+  .cor {
+      color: red;
+  }
+
+  .tela {
+      width: 500px;
+      margin: auto;
+      
+  }
+
