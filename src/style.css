@@ -1,28 +1,32 @@
 body {    
     background-color: lightblue;
-    background-image: url(imagens/02.jpg);
+    background-image: url(imagens/04.jpg);
     background-attachment: fixed;
     background-size: 100%;
+    background-repeat: no-repeat;
+    background-color: rgb(6, 6, 92);
 
   }
   
   h1 {
-    margin-top: 1cm;
+    margin-top: 130px;
     color: rgb(223, 12, 12);
     text-align: center;
     justify-content: center;
     font-family: 'Trebuchet MS';
+    font-size: 50px;
   }
   
   p {
-      margin-top: 5cm;
-      margin-right: 100px;
-      
+      margin-top: 5px;
+      margin-right: 800px;
+      margin-left: 120px;
+    
       color: black;
       text-align: justify;
       justify-content: left;
       font-family: 'Trebuchet MS';
-      Position: left;
+      Position: margin-left;
       
   }
 
@@ -30,9 +34,9 @@ body {
       color: red;
   }
 
-  .tela {
-      width: 500px;
-      margin: auto;
+  .mensagem {
+      width: 200px;
+      margin: left;
       
   }
 
