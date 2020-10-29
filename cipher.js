@@ -1,33 +1,37 @@
-const cipher = function encrypt (mensagem, deslocamento) {
-  let codigoDaLetraASC = 65
-  let cod1aLetra = -65
-  let desloc = 4
-  let tamDoAlfabeto = 26
+const cipher = 
 
+function criptografarMensagem (mensagem, deslocamento) {
+  let mensagemDigitada = []
+  let numDeslocamento;
 
-  if (mensagem == ((codigoDaLetraASC - cod1aLetra + desloc) % tamDoAlfabeto) + cod1aLetra)
-  return mensagem.fromCharCode();
+  for (let i = 0; i < mensagem.length; i++) {
+    numDeslocamento = mensagem.charCodeAt([i]);
+  }
 
 }
- 
-   // ((codigoDaLetraASC - cod1aLetra + desloc) % tamDoAlfabeto) + cod1aLetra
-   // return string.fromCharCode();
+  return encodeURIComponent("mensagemCifrada")
+
+function descriptografarMensagem (mensagem, deslocamento) {
+  for (let i = 0; i < mensagem.length; i++) {
+    numDeslocamento = mensagem.charCodeAt([i]);
+  }
+
+
+}
+return decodeURIComponent("mensagemDecifrada")
 
 
 
 export default cipher;
 
 
+// let codigoDaLetraASC = 65
+// let cod1aLetra = -65
+// let desloc = [4]
+// let Alfabeto = [26]
 
- // function (decrypt) {
-   // ((codigoDaLetraASC - cod1aLetra - desloc) % tamDoAlfabeto) + cod1aLetra
-   // return string.fromCharCode();
-
-//};
-
-
-
-
+// function (decrypt)
+// return string.fromCharCode();
 
 
 
