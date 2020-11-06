@@ -1,42 +1,78 @@
-body {    
-    background-color: lightblue;
-    background-image: url(imagens/04.jpg);
-    background-attachment: fixed;
-    background-size: 100%;
-    background-repeat: no-repeat;
-    background-color: rgb(6, 6, 92);
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
 
+.header {
+  display: grid;
+  grid-area: "header header header" "aside main" "footer footer footer";
+}
+
+body {    
+    background-image: url(imagens/04.jpg); /* imagem de fundo */
+    background-color: rgb(6, 6, 92); /* cor de fundo, imagem */
+    background-attachment: fixed; /* rolagem do fundo */
+    background-size: 100%; /* ajustar imagem na pagina */
+    background-repeat: no-repeat; /* para a imagem não se repetir (ficar dividida, varios quadrados) */
+  
   }
   
   h1 {
-    margin-top: 130px;
+    margin-top: 130px; /* tamanho da margem superior */
     color: rgb(223, 12, 12);
-    text-align: center;
-    justify-content: center;
-    font-family: 'Trebuchet MS';
-    font-size: 50px;
+    text-align: center; /* alinhamento do texto */
+    justify-content: center; /* alinhar os elementos ao longo do eixo principal */
+    font-family: 'Roboto', sans-serif;
+    font-size: 50px; /* tamanho da letra */
   }
   
   p {
-      margin-top: 5px;
-      margin-right: 800px;
-      margin-left: 120px;
-    
+      margin-top: 2px; /* tamanho da margem superior */
+      margin-right: 800px; /* tamanho da margem direita */
+      margin-left: 120px; /* tamanho da margem esquerda */
       color: black;
-      text-align: justify;
-      justify-content: left;
-      font-family: 'Trebuchet MS';
-      Position: margin-left;
-      
+      text-align: justify; /* alinhamento do texto */
+      justify-content: left; /* alinhar os elementos ao longo do eixo principal */
+      font-family: 'Roboto', sans-serif; /* */
+      position: margin-right; /* como o elemento é posicionado na página */       
   }
 
-  .cor {
-      color: red;
+  .quadrados {
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+
   }
 
-  .mensagem {
-      width: 200px;
-      margin: left;
-      
+  .mensagemDigitada {
+
+    width: 200px; /* largura do elemento */
+    margin: 10px; /* tamanho de todas as 4 margens */
+    /*padding: 1px; /*espaço em torno de um elemento em todos os lados */
+    font-family: 'Roboto', sans-serif;
+    resize: none; /* o espaço para escrever não poderá ser redimensionado
+    
+
   }
 
+  .deslocamento {
+    width: 200px; /* largura do elemento */
+    margin: 10px; /* tamanho de todas as 4 margens */
+    /*padding: 1px; /*espaço em torno de um elemento em todos os lados */
+    font-family: 'Roboto', sans-serif;
+  }
+
+  .botão {
+    /*width: 200px; /* largura do elemento */
+    margin: 10px; /* tamanho de todas as 4 margens */
+    /*padding: 1px; /*espaço em torno de um elemento em todos os lados */
+    font-family: 'Roboto', sans-serif;
+  }
+
+  .mensagemRetornada {
+    width: 200px; /* largura do elemento */
+    margin: 10px; /* tamanho de todas as 4 margens */
+    /*padding: 1px; /*espaço em torno de um elemento em todos os lados */
+    font-family: 'Roboto', sans-serif; 
+    resize: none; /* o espaço para escrever não poderá ser redimensionado   
+
+  }
+
+ 

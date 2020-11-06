@@ -1,35 +1,61 @@
 <!DOCTYPE html>
 <html>
+
   <head>
     <meta charset="utf-8">
     <title>Correio Elegante</title>
     <link rel="stylesheet" href="style.css" />
   </head>
+
+
   <body>
-
     <div id="root">
+      <header>
+        <h1>Correio Elegante</h1>
+      </header>
   
-      <h1>Correio Elegante</h1>
 
-      <div class="paragrafo">
-      <p>Correio Elegante é uma brincadeira típica de festas juninas em que uma pessoa envia um bilhetinho para ser entregue a uma outra pessoa. </p>
-      <p class="cor"> Os charmosos correios elegantes conquistaram adeptos e resistiram ao passar do tempo, sendo parte das tradições das festas juninas, que surgiram nas áreas rurais do Brasil. Durante a comemoração junina, “mensageiros” são encarregados de recolher recados apaixonados e garantir que eles cheguem a seus destinatários.</p>
-      </div>
+      <aside>
+        <div class="paragrafo">
+          <p>Correio Elegante é uma brincadeira típica de festas juninas em que uma pessoa envia um bilhetinho para ser entregue a uma outra pessoa. </p>
+          <p> Os charmosos correios elegantes conquistaram adeptos e resistiram ao passar do tempo, sendo parte das tradições das festas juninas, que surgiram nas áreas rurais do Brasil. Durante a comemoração junina, “mensageiros” são encarregados de recolher recados apaixonados e garantir que eles cheguem a seus destinatários.</p>
+          </div>
+      </aside>
 
 
-      <div class= "mensagem">
-        <div> </div>
-        Digite qual valor deseja usar no seu deslocamento
-        <input type="text" name="numDeslocamento" value="Digite aqui">
-        Digite a mensagem que deseja que os nossos mensageiros entreguem. 
-        <input type="text" name="mensagemDigitada" value="Digite aqui">
-        <button onclick="criptografarMensagem()">Criptografar</button>
-        <input type="text" name="mensagemRetornada" value=" ">
+      <main>
+        <div class= "quadrados">
 
-        <div> </div>
-        <button onclick="descriptografarMensagem()">Descriptografar</button>
-      </div>
-   
+          <div class= "mensagemDigitada">
+            <label>Digite sua mensagem.</label> 
+            <textarea type="text" id="mensagemDigitada"></textarea>
+          </div>
+          
+          <div class= "deslocamento">
+            <label>Escolha o deslocamento.</label>
+            <input type="number" id="numDeslocamento" value>
+          </div>
+    
+          <div class= "botão">
+            <button id="Criptografar">Criptografar</button>
+            <button id="Descriptografar">Descriptografar</button>        
+          </div>
+    
+          <div class= "mensagemRetornada">
+            <label>Mensagem retornada.</label>
+            <textarea type="text" id="mensagemRetornada"></textarea>
+          </div>
+    
+        </div>
+
+      </main>
+
+
+      <footer>
+        <!-- rodapé -->
+      </footer>
+     
+       
     </div>
     <script src="index.js" type="module"></script>
   </body>
