@@ -1,16 +1,17 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
 
-
 body {
   background-image: url(imagens/04.jpg); /* imagem de fundo */
   background-color: rgb(6, 6, 92); /* cor de fundo, imagem */
   background-attachment: fixed; /* rolagem do fundo */
-  background-size: cover; /* ajustar imagem na pagina */
+  background-size: cover; /* ajustar imagem na pagina*/
   background-repeat: no-repeat; /* para a imagem não se repetir (ficar dividida, varios quadrados) */
-  background-position: top; /* em cima*/
+  background-position: top ; /* em cima*/
   text-align: justify; /* alinhamento do texto */
+  height: 100vh; /*altura se ajustar a altura do dispositivo*/
+  display: flex;
+  overflow: hidden; /*ocultar a barra de rolagem*/
 }
-
 
 h1 {
   text-align: center; /* alinhamento do texto */
@@ -18,7 +19,7 @@ h1 {
   text-align: center; /* alinhamento do texto */
   justify-content: center; /* alinhar os elementos ao longo do eixo principal */
   font-family: 'Roboto', sans-serif;
-  font-size: 50px; /*tamanho da letra*/
+  font-size: 60px; /*tamanho da letra*/
   margin-top: 10%; /* tamanho da margem superior */
 }
 
@@ -28,26 +29,30 @@ h1 {
   display: inline-block;
   width: 40%; /* tamanho que a parte escrita ocupa na tela, largura do elemento */
   margin-left: 10%; /* tamanho da margem esquerda */
-  margin-top: 0%; /* tamanho da margem superior */
+  margin-top: -2%; /* tamanho da margem superior */
   margin-bottom: 0%;
+  font-size: 120%;
 }
 
 .quadrados {
+  right: 0%;
+  position: fixed;
+
   font-family: 'Roboto', sans-serif;
   display: inline-block;
-  width: 50%;
+  width: 40%;
   flex-direction: column;
-  margin-left: 5%;
-  margin-top: 0%;
+  align-self: initial;
+  margin-left: 0%;
+  margin-right: 0%;
+  margin-top: -20%;
   padding: 0%;
-  justify-content: left;
-  box-sizing: border-box;
- } 
+}
 
 .mensagem {
   font-family: 'Roboto', sans-serif;
   display: inline-block;
-  width: 50%;
+  width: 40%;
   flex-direction: column;
   margin-left: 8%;
   margin-top: 0%;
@@ -80,13 +85,12 @@ button {
   flex-direction: row;
 }
 
- 
-/* position: margin-right; /* como o elemento é posicionado na página */ 
-/* margin: 10px; /* tamanho de todas as 4 margens */  
-/* font-family: 'Roboto', sans-serif */    
-/* resize: none; /* o espaço para escrever não poderá ser redimensionado
-/*padding: 1.5em 1.2em; /*espaço em torno de um elemento em todos os lados */
-
 footer {
-
+  color: rgb(94, 8, 55);
+  text-align: center;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  font-size: 100%;
 }
