@@ -2,15 +2,15 @@ import cipher from './cipher.js';
 
 
 
-document.getElementById("Criptografar").addEventListener ("click", criptografarMensagem);
+document.getElementById("Criptografar").addEventListener ("click", encodeCipher);
 
-function criptografarMensagem () {
+function encodeCipher () {
     
     let mensagemDigitada = String(document.getElementById ("mensagemDigitada").value).toUpperCase(); 
     
     let numDeslocamento = Number(document.getElementById("numDeslocamento").value); 
       
-    let criptografar = cipher.encode(mensagemDigitada, numDeslocamento); 
+    let criptografar = cipher.encode(numDeslocamento, mensagemDigitada); 
 
     document.getElementById("mensagemRetornada").value = criptografar
 
@@ -18,15 +18,15 @@ function criptografarMensagem () {
 
 
 
-document.getElementById("Descriptografar").addEventListener ("click", descriptografarMensagem);
+document.getElementById("Descriptografar").addEventListener ("click", decodeCipher);
 
-function descriptografarMensagem () {
+function decodeCipher () {
 
     let mensagemDigitada = String(document.getElementById ("mensagemDigitada").value).toUpperCase(); 
     
     let numDeslocamento = Number(document.getElementById("numDeslocamento").value); 
     
-    let descriptografar = cipher.decode(mensagemDigitada, numDeslocamento); 
+    let descriptografar = cipher.decode(numDeslocamento, mensagemDigitada); 
 
     document.getElementById("mensagemRetornada").value = descriptografar
 

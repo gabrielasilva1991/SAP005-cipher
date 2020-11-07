@@ -10,29 +10,28 @@
 
   <body>
     <div id="root">
-      <header>
-        <h1>Correio Elegante</h1>
+      <header class="header">
+        <h1><strong>Correio Elegante</strong> </h1>
       </header>
   
 
       <aside>
-        <div class="paragrafo">
-          <p>Correio Elegante é uma brincadeira típica de festas juninas em que uma pessoa envia um bilhetinho para ser entregue a uma outra pessoa. </p>
-          <p> Os charmosos correios elegantes conquistaram adeptos e resistiram ao passar do tempo, sendo parte das tradições das festas juninas, que surgiram nas áreas rurais do Brasil. Durante a comemoração junina, “mensageiros” são encarregados de recolher recados apaixonados e garantir que eles cheguem a seus destinatários.</p>
-          </div>
+        <div>
+          <p class="paragrafo">Correio Elegante é uma brincadeira típica de festas juninas em que uma pessoa envia um bilhetinho para ser entregue a uma outra pessoa. <br> Os charmosos correios elegantes conquistaram adeptos e resistiram ao passar do tempo, sendo parte das tradições das festas juninas, que surgiram nas áreas rurais do Brasil. Durante a comemoração junina, “mensageiros” são encarregados de recolher recados apaixonados e garantir que eles cheguem a seus destinatários. </p>
+        </div>
       </aside>
 
 
-      <main>
-        <div class= "quadrados">
+      <main class="quadrados">
+        <div>
 
-          <div class= "mensagemDigitada">
-            <label>Digite sua mensagem.</label> 
-            <textarea type="text" id="mensagemDigitada"></textarea>
+          <div class= "mensagem">
+            <label><i>Digite sua mensagem</i></label><br>
+            <textarea class="caixaDeTexto" type="text" id="mensagemDigitada"></textarea>
           </div>
           
           <div class= "deslocamento">
-            <label>Escolha o deslocamento.</label>
+            <label><i>Chave</i></label><br>
             <input type="number" id="numDeslocamento" value>
           </div>
     
@@ -41,9 +40,9 @@
             <button id="Descriptografar">Descriptografar</button>        
           </div>
     
-          <div class= "mensagemRetornada">
-            <label>Mensagem retornada.</label>
-            <textarea type="text" id="mensagemRetornada"></textarea>
+          <div class= "mensagem">
+            <label><i>Mensagem retornada</i></label><br>
+            <textarea class= "type="text" id="mensagemRetornada"></textarea>
           </div>
     
         </div>
@@ -51,7 +50,7 @@
       </main>
 
 
-      <footer>
+      <footer class="footer">
         <!-- rodapé -->
       </footer>
      
