@@ -1,7 +1,5 @@
 import cipher from './cipher.js';
 
-
-
 document.getElementById("Criptografar").addEventListener ("click", encodeCipher);
 
 function encodeCipher () {
@@ -16,8 +14,6 @@ function encodeCipher () {
 
 }
 
-
-
 document.getElementById("Descriptografar").addEventListener ("click", decodeCipher);
 
 function decodeCipher () {
@@ -31,12 +27,6 @@ function decodeCipher () {
     document.getElementById("mensagemRetornada").value = descriptografar
 
 }
-
-
-
-// document.getElementById("Criptografar").addEventListener ("click", function(event) {
-//     event.preventDefault()
-//     criptografar();
 
 // const btnCriptografar //mensagem retornada criptografada
 // let mensagemDigitada //mensagem digitada deve retornar em forma de texto com as letras maiusculas

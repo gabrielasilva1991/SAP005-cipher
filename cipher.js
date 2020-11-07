@@ -57,6 +57,9 @@ export default cipher;
 
 //String.fromCharcode ==> retorna a mensagem em forma de texto
 
+//+= ==> a= a+b (soma mensagem inicial + mensagem criptografada - 
+// Cada vez que o for faz o loop ele acrescenta mais um caractere até terminar a mensagem)
+
 
 //condição inicial // passar pela letra // repete para cada letra
 //for (let i = 0; i < mensagemDigitada.length; i++) {}
@@ -64,39 +67,3 @@ export default cipher;
 // ((codigoDaLetraASC - cod1aLetra + desloc) % tamDoAlfabeto) + cod1aLetra
 //     65 a 90             -65                        26          65
 // codigoAsc ==>     codigo0a25 ==> deslocamento ==> giro ==> codigoASC
-
-
-
-  // encode: function (mensagemDigitada, numDeslocamento) {
-  //   let mensagemRetornada = "";
-  //   let tamAlfabeto = 26;
-  //   let codigoAscii = 65;
-
-  //   for (let i = 0; i < mensagemDigitada.length; i++) {
-  //     let posicaoInicialMensagem = Number(mensagemDigitada.charCodeAt(i));
-  //     let posicaoFinalMensagem = ((posicaoInicialMensagem - codigoAscii + numDeslocamento) % tamAlfabeto) + codigoAscii;
-  //     let mensagemFinal = String.fromCharCode(posicaoFinalMensagem);
-  
-  //     mensagemRetornada += mensagemFinal
-
-  //   }
-  //   return mensagemRetornada
-
-  // },
-
-  // decode: function (mensagemDigitada, numDeslocamento) {
-  //   let mensagemRetornada = "";
-  //   let tamAlfabeto = 26;
-  //   let codigoAscii = 65;
-
-  //   for (let i = 0; i < mensagemDigitada.length; i++) {
-  //     let posicaoInicialMensagem = Number(mensagemDigitada.charCodeAt(i));
-  //     let posicaoFinalMensagem = ((posicaoInicialMensagem + codigoAscii - numDeslocamento) % tamAlfabeto) + codigoAscii;
-  //     let mensagemFinal = String.fromCharCode(posicaoFinalMensagem);
-  
-  //     mensagemRetornada += mensagemFinal
-  
-  //   }
-  //   return mensagemRetornada
-
-  // }
