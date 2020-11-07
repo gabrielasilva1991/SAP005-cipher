@@ -1,78 +1,92 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
 
-.header {
-  display: grid;
-  grid-area: "header header header" "aside main" "footer footer footer";
+
+body {
+  background-image: url(imagens/04.jpg); /* imagem de fundo */
+  background-color: rgb(6, 6, 92); /* cor de fundo, imagem */
+  background-attachment: fixed; /* rolagem do fundo */
+  background-size: cover; /* ajustar imagem na pagina */
+  background-repeat: no-repeat; /* para a imagem não se repetir (ficar dividida, varios quadrados) */
+  background-position: top; /* em cima*/
+  text-align: justify; /* alinhamento do texto */
 }
 
-body {    
-    background-image: url(imagens/04.jpg); /* imagem de fundo */
-    background-color: rgb(6, 6, 92); /* cor de fundo, imagem */
-    background-attachment: fixed; /* rolagem do fundo */
-    background-size: 100%; /* ajustar imagem na pagina */
-    background-repeat: no-repeat; /* para a imagem não se repetir (ficar dividida, varios quadrados) */
-  
-  }
-  
-  h1 {
-    margin-top: 130px; /* tamanho da margem superior */
-    color: rgb(223, 12, 12);
-    text-align: center; /* alinhamento do texto */
-    justify-content: center; /* alinhar os elementos ao longo do eixo principal */
-    font-family: 'Roboto', sans-serif;
-    font-size: 50px; /* tamanho da letra */
-  }
-  
-  p {
-      margin-top: 2px; /* tamanho da margem superior */
-      margin-right: 800px; /* tamanho da margem direita */
-      margin-left: 120px; /* tamanho da margem esquerda */
-      color: black;
-      text-align: justify; /* alinhamento do texto */
-      justify-content: left; /* alinhar os elementos ao longo do eixo principal */
-      font-family: 'Roboto', sans-serif; /* */
-      position: margin-right; /* como o elemento é posicionado na página */       
-  }
 
-  .quadrados {
-    display: flex;
-    flex-direction: column;
-    justify-content: left;
+h1 {
+  text-align: center; /* alinhamento do texto */
+  color: rgb(223, 12, 12);
+  text-align: center; /* alinhamento do texto */
+  justify-content: center; /* alinhar os elementos ao longo do eixo principal */
+  font-family: 'Roboto', sans-serif;
+  font-size: 50px; /*tamanho da letra*/
+  margin-top: 10%; /* tamanho da margem superior */
+}
 
-  }
+.paragrafo {
+  font-family: 'Roboto', sans-serif;
+  color: black;
+  display: inline-block;
+  width: 40%; /* tamanho que a parte escrita ocupa na tela, largura do elemento */
+  margin-left: 10%; /* tamanho da margem esquerda */
+  margin-top: 0%; /* tamanho da margem superior */
+  margin-bottom: 0%;
+}
 
-  .mensagemDigitada {
+.quadrados {
+  font-family: 'Roboto', sans-serif;
+  display: inline-block;
+  width: 50%;
+  flex-direction: column;
+  margin-left: 5%;
+  margin-top: 0%;
+  padding: 0%;
+  justify-content: left;
+  box-sizing: border-box;
+ } 
 
-    width: 200px; /* largura do elemento */
-    margin: 10px; /* tamanho de todas as 4 margens */
-    /*padding: 1px; /*espaço em torno de um elemento em todos os lados */
-    font-family: 'Roboto', sans-serif;
-    resize: none; /* o espaço para escrever não poderá ser redimensionado
-    
+.mensagem {
+  font-family: 'Roboto', sans-serif;
+  display: inline-block;
+  width: 50%;
+  flex-direction: column;
+  margin-left: 8%;
+  margin-top: 0%;
+  padding: 2%; /*espaço em torno de um elemento em todos os lados */
+  justify-content: left; /* alinhar os elementos ao longo do eixo principal */
+  box-sizing: border-box;
+}
 
-  }
+.deslocamento {
+  font-family: 'Roboto', sans-serif;
+  display: inline-block;
+  width: 50% ;
+  flex-direction: column;
+  margin-left: 8%;
+  margin-top: 0%;
+  padding: 1%; /*espaço em torno de um elemento em todos os lados */
+  justify-content: left; /* alinhar os elementos ao longo do eixo principal */
+  box-sizing: border-box; /* não adiciona as bordas e os padding  ao tamanho do elemento*/
+}
 
-  .deslocamento {
-    width: 200px; /* largura do elemento */
-    margin: 10px; /* tamanho de todas as 4 margens */
-    /*padding: 1px; /*espaço em torno de um elemento em todos os lados */
-    font-family: 'Roboto', sans-serif;
-  }
-
-  .botão {
-    /*width: 200px; /* largura do elemento */
-    margin: 10px; /* tamanho de todas as 4 margens */
-    /*padding: 1px; /*espaço em torno de um elemento em todos os lados */
-    font-family: 'Roboto', sans-serif;
-  }
-
-  .mensagemRetornada {
-    width: 200px; /* largura do elemento */
-    margin: 10px; /* tamanho de todas as 4 margens */
-    /*padding: 1px; /*espaço em torno de um elemento em todos os lados */
-    font-family: 'Roboto', sans-serif; 
-    resize: none; /* o espaço para escrever não poderá ser redimensionado   
-
-  }
+button {
+  font-family: 'Roboto', sans-serif ;
+  cursor: pointer;
+  width: auto; /* largura do elemento */
+  margin: auto; /* tamanho de todas as 4 margens */
+  padding: 0,5%; /*espaço em torno de um elemento em todos os lados */
+  margin-left: 8%;
+  margin-top: 0%;
+  box-sizing: border-box;
+  flex-direction: row;
+}
 
  
+/* position: margin-right; /* como o elemento é posicionado na página */ 
+/* margin: 10px; /* tamanho de todas as 4 margens */  
+/* font-family: 'Roboto', sans-serif */    
+/* resize: none; /* o espaço para escrever não poderá ser redimensionado
+/*padding: 1.5em 1.2em; /*espaço em torno de um elemento em todos os lados */
+
+footer {
+
+}

@@ -1,52 +1,54 @@
 const cipher = {
 
-  encode: function (mensagemDigitada, numDeslocamento) {
-    let mensagemRetornada = "";
-    let tamAlfabeto = 26;
-    let codigoAscii = 65;
+  encode: function (numDeslocamento, mensagemDigitada) {
+    
+    if (!mensagemDigitada || !numDeslocamento) {
+      throw new TypeError("Inserir a mensagem e a chave");
 
-    for (let i = 0; i < mensagemDigitada.length; i++) {
-      let posicaoInicialMensagem = Number(mensagemDigitada.charCodeAt[i]);
-      let posicaoFinalMensagem = ((posicaoInicialMensagem - codigoAscii + numDeslocamento) % tamAlfabeto) + codigoAscii;
-      let mensagemFinal = String.fromCharCode(posicaoFinalMensagem);
+    } else {
+      let mensagemRetornada = "";
+      let tamAlfabeto = 26;
+      let codigoAscii = 65;
+
+      for (let i = 0; i < mensagemDigitada.length; i++) {
+        let posicaoInicialMensagem = mensagemDigitada.charCodeAt(i);
+        let posicaoFinalMensagem = ((posicaoInicialMensagem + codigoAscii + numDeslocamento) % tamAlfabeto) + codigoAscii;
+        let mensagemFinal = String.fromCharCode(posicaoFinalMensagem);
   
-      mensagemRetornada += mensagemFinal     
-          
+        mensagemRetornada += mensagemFinal
       }
-      
       return mensagemRetornada;
 
     }
-      
   },
 
-  decode: function (mensagemDigitada, numDeslocamento) {
-    let mensagemRetornada = "";
-    let tamAlfabeto = 26;
-    let codigoAscii = 65;
+  decode: function (numDeslocamento, mensagemDigitada) {
 
-    for (let i = 0; i < mensagemDigitada.length; i++) {
-      let posicaoInicialMensagem = Number(mensagemDigitada.charCodeAt[i]);
-      let posicaoFinalMensagem = ((posicaoInicialMensagem + codigoAscii - numDeslocamento) % tamAlfabeto) + codigoAscii;
-      let mensagemFinal = String.fromCharCode(posicaoFinalMensagem);  
+    if (!mensagemDigitada || !numDeslocamento) {
+      throw new TypeError("Inserir a mensagem e a chave");
 
-      mensagemRetornada += mensagemFinal 
+    } else {
+      let mensagemRetornada = "";
+      let tamAlfabeto = 26;
+      let codigoAscii = 65;
+
+      for (let i = 0; i < mensagemDigitada.length; i++) {
+        let posicaoInicialMensagem = mensagemDigitada.charCodeAt(i);
+        let posicaoFinalMensagem = ((posicaoInicialMensagem + codigoAscii - numDeslocamento) % tamAlfabeto) + codigoAscii;
+        let mensagemFinal = String.fromCharCode(posicaoFinalMensagem);
+  
+        mensagemRetornada += mensagemFinal
+  
+      }
+      return mensagemRetornada;
 
     }
 
-    return mensagemRetornada;
-    
   }
  
-}
+};
 
 export default cipher;
-
-
-
-//if (!mensagemDigitada || !numDeslocamento) {
-//throw new TypeError("Inserir a mensagem e o deslocamento ");
-
 
 
 //se não digitar mensagem OU deslocamento o codigo não executa ==> if (!mensagemDigitada || !numDeslocamento)
@@ -62,3 +64,39 @@ export default cipher;
 // ((codigoDaLetraASC - cod1aLetra + desloc) % tamDoAlfabeto) + cod1aLetra
 //     65 a 90             -65                        26          65
 // codigoAsc ==>     codigo0a25 ==> deslocamento ==> giro ==> codigoASC
+
+
+
+  // encode: function (mensagemDigitada, numDeslocamento) {
+  //   let mensagemRetornada = "";
+  //   let tamAlfabeto = 26;
+  //   let codigoAscii = 65;
+
+  //   for (let i = 0; i < mensagemDigitada.length; i++) {
+  //     let posicaoInicialMensagem = Number(mensagemDigitada.charCodeAt(i));
+  //     let posicaoFinalMensagem = ((posicaoInicialMensagem - codigoAscii + numDeslocamento) % tamAlfabeto) + codigoAscii;
+  //     let mensagemFinal = String.fromCharCode(posicaoFinalMensagem);
+  
+  //     mensagemRetornada += mensagemFinal
+
+  //   }
+  //   return mensagemRetornada
+
+  // },
+
+  // decode: function (mensagemDigitada, numDeslocamento) {
+  //   let mensagemRetornada = "";
+  //   let tamAlfabeto = 26;
+  //   let codigoAscii = 65;
+
+  //   for (let i = 0; i < mensagemDigitada.length; i++) {
+  //     let posicaoInicialMensagem = Number(mensagemDigitada.charCodeAt(i));
+  //     let posicaoFinalMensagem = ((posicaoInicialMensagem + codigoAscii - numDeslocamento) % tamAlfabeto) + codigoAscii;
+  //     let mensagemFinal = String.fromCharCode(posicaoFinalMensagem);
+  
+  //     mensagemRetornada += mensagemFinal
+  
+  //   }
+  //   return mensagemRetornada
+
+  // }
